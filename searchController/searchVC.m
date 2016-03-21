@@ -7,7 +7,7 @@
 //
 
 #import "searchVC.h"
-#import "searchResultVC.h"
+#import "SearchResultViewController.h"
 
 @interface searchVC ()<UISearchResultsUpdating,UISearchBarDelegate>
 @property (nonatomic, strong) UISearchController *searchController;
@@ -37,17 +37,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+    [self initSearchController];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initSearchController];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.definesPresentationContext = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +52,7 @@
 }
 
 - (void)initSearchController{
-    searchResultVC *resultTVC = [[searchResultVC alloc] initWithStyle:UITableViewStylePlain];
+    SearchResultViewController *resultTVC = [[SearchResultViewController alloc] initWithNibName:@"SearchResultViewController" bundle:nil];
     UINavigationController *resultVC = [[UINavigationController alloc] initWithRootViewController:resultTVC];
     self.searchController = [[UISearchController alloc]initWithSearchResultsController:resultVC];
     self.searchController.searchResultsUpdater = self;
@@ -69,6 +65,8 @@
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
     self.searchController.searchBar.delegate = self;
+    
+    resultTVC.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
 }
 
 
@@ -89,12 +87,16 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0;
+}
+
 
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     UINavigationController *navController = (UINavigationController *)self.searchController.searchResultsController;
-    searchResultVC *resultVC = (searchResultVC *)navController.topViewController;
+    SearchResultViewController *resultVC = (SearchResultViewController *)navController.topViewController;
     [self filterContentForSearchText:self.searchController.searchBar.text];
     resultVC.resultsArray = self.tempsArray;
     [resultVC.tableView reloadData];

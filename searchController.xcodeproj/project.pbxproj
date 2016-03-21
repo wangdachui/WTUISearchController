@@ -17,8 +17,8 @@
 		4B1F428D1C311B4F0070F421 /* searchControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F428C1C311B4F0070F421 /* searchControllerUITests.m */; };
 		4B1F429D1C311B9C0070F421 /* searchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F429B1C311B9C0070F421 /* searchVC.m */; };
 		4B1F429E1C311B9C0070F421 /* searchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1F429C1C311B9C0070F421 /* searchVC.xib */; };
-		4B1F42A21C311BBB0070F421 /* searchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F42A01C311BBB0070F421 /* searchResultVC.m */; };
-		4B1F42A31C311BBB0070F421 /* searchResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1F42A11C311BBB0070F421 /* searchResultVC.xib */; };
+		4B9AAA951C8D933E00667A08 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AAA931C8D933E00667A08 /* SearchResultViewController.m */; };
+		4B9AAA961C8D933E00667A08 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9AAA941C8D933E00667A08 /* SearchResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		4B1F429A1C311B9C0070F421 /* searchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchVC.h; sourceTree = "<group>"; };
 		4B1F429B1C311B9C0070F421 /* searchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchVC.m; sourceTree = "<group>"; };
 		4B1F429C1C311B9C0070F421 /* searchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchVC.xib; sourceTree = "<group>"; };
-		4B1F429F1C311BBB0070F421 /* searchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchResultVC.h; sourceTree = "<group>"; };
-		4B1F42A01C311BBB0070F421 /* searchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchResultVC.m; sourceTree = "<group>"; };
-		4B1F42A11C311BBB0070F421 /* searchResultVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchResultVC.xib; sourceTree = "<group>"; };
+		4B9AAA921C8D933E00667A08 /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		4B9AAA931C8D933E00667A08 /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		4B9AAA941C8D933E00667A08 /* SearchResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +114,9 @@
 				4B1F429A1C311B9C0070F421 /* searchVC.h */,
 				4B1F429B1C311B9C0070F421 /* searchVC.m */,
 				4B1F429C1C311B9C0070F421 /* searchVC.xib */,
-				4B1F429F1C311BBB0070F421 /* searchResultVC.h */,
-				4B1F42A01C311BBB0070F421 /* searchResultVC.m */,
-				4B1F42A11C311BBB0070F421 /* searchResultVC.xib */,
+				4B9AAA921C8D933E00667A08 /* SearchResultViewController.h */,
+				4B9AAA931C8D933E00667A08 /* SearchResultViewController.m */,
+				4B9AAA941C8D933E00667A08 /* SearchResultViewController.xib */,
 				4B1F426A1C311B4F0070F421 /* AppDelegate.h */,
 				4B1F426B1C311B4F0070F421 /* AppDelegate.m */,
 				4B1F426D1C311B4F0070F421 /* ViewController.h */,
@@ -261,7 +261,7 @@
 			files = (
 				4B1F429E1C311B9C0070F421 /* searchVC.xib in Resources */,
 				4B1F42771C311B4F0070F421 /* LaunchScreen.storyboard in Resources */,
-				4B1F42A31C311BBB0070F421 /* searchResultVC.xib in Resources */,
+				4B9AAA961C8D933E00667A08 /* SearchResultViewController.xib in Resources */,
 				4B1F42741C311B4F0070F421 /* Assets.xcassets in Resources */,
 				4B1F42721C311B4F0070F421 /* Main.storyboard in Resources */,
 			);
@@ -288,11 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B1F42A21C311BBB0070F421 /* searchResultVC.m in Sources */,
 				4B1F429D1C311B9C0070F421 /* searchVC.m in Sources */,
 				4B1F426F1C311B4F0070F421 /* ViewController.m in Sources */,
 				4B1F426C1C311B4F0070F421 /* AppDelegate.m in Sources */,
 				4B1F42691C311B4F0070F421 /* main.m in Sources */,
+				4B9AAA951C8D933E00667A08 /* SearchResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +516,7 @@
 				4B1F42931C311B4F0070F421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B1F42941C311B4F0070F421 /* Build configuration list for PBXNativeTarget "searchControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				4B1F42961C311B4F0070F421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B1F42971C311B4F0070F421 /* Build configuration list for PBXNativeTarget "searchControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				4B1F42991C311B4F0070F421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "searchResultVC.h"
 #import "searchVC.h"
 
 @interface ViewController ()
